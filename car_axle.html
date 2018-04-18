@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body onload="Car_AXLE()">
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="Main.html" class="w3-bar-item w3-button">Main Page</a>
+    <a href="SHEAR.html" class="w3-bar-item w3-button"> SHEARING </a>
+    <a href="TRANSFORMATION.html" class="w3-bar-item w3-button">TRANSFORMATION</a>
+    <a href="car_axle.html" class="w3-bar-item w3-button">CAR AXLE</a>
+    <a href="Planets.html" class="w3-bar-item w3-button">SOLAR SYSTEM</a>
+</div>
+
+
+
+<div id="main">
+
+    <div class="w3-black">
+      <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>CAR AXLE RENDER</h1>
+        </div>
+    </div>
+
+   
+
+
+</div>
+
+
+
+<script src="http://threejs.org/build/three.min.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="dat.gui.js"></script>
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+<script src="car_axle.js"></script>
+
+</body>
+</html>
